@@ -1,0 +1,43 @@
+$enable-important-utilities: false; // Disables bootstrap's '!important'
+
+$primary: #0092e4;
+$primary-foreground: #2f72bc;
+$secondary: #e4a79d;
+$text-muted: #5a607d;
+$text-dark: #1c2033;
+$text-dark-2: #737999;
+$border-color: #8f95b2;
+$bg-skeleton: rgba(217, 217, 217, 0.4); // #d9d9d9
+$bg-download: #f5f6fa;
+
+// General
+$white: #ffffff;
+$black: #000000;
+
+// Navbar
+$navbar-dark-color: #2e334d;
+
+// Footer
+$grey-1: #ebedf5;
+// $grey-1: ;
+$grey-2: #424866;
+$grey-3: #d8dbeb;
+$grey-4: #2e334c;
+
+// Page
+$bg-white-2: #fafafc;
+
+// Switch
+$switch-bg-color: #b5bad4;
+$active-switch-bg-color: #24a8af;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.75,
+  4: $spacer,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+);
