@@ -182,7 +182,10 @@ watch(
     let result: Record<string, string> = {};
 
     for (const option of selectedOptions) {
-      const key = option.title.toLowerCase().replace(" ", "_");
+      const key =
+        option.title.toLowerCase().replace(" ", "_") === "sort_by"
+          ? "sort"
+          : option.title.toLowerCase();
       result[key] = option.value;
     }
 

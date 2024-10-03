@@ -34,6 +34,14 @@ const loadingHeaderText = `Searching ${assetType.value} ${mappedQueries.value?.q
 // Initial Request
 await makeApiRequest(mappedQueries.value, assetType.value === "all");
 
+watch(
+  mappedQueries,
+  async (newQueries) => {
+    await makeApiRequest(newQueries, assetType.value === "all");
+  },
+  { deep: true }
+);
+
 watch(lottie_page, async (newPage) => {
   if (newPage < 2) return;
 

@@ -27,7 +27,7 @@ export default () => {
     const defaultQuery = {
       query: search,
       view: view,
-      price,
+      price: price === "all" ? "" : price,
       sort: sort,
       //   page: page.value,
       per_page: assetType.value === "icon" ? 100 : 60,
