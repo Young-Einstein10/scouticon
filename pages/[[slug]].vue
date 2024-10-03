@@ -22,7 +22,6 @@
 <script lang="ts" setup>
 import { useAssetsStore } from "~/store/assets";
 
-const route = useRoute();
 const store = useAssetsStore();
 const { makeApiRequest, updateLottieAssetData } = store;
 const { seoTitle, headerTitle, bodyDescription, loading, lottie_page } =
@@ -33,15 +32,7 @@ const { mappedQueries, assetType } = useQueryParams();
 const loadingHeaderText = `Searching ${assetType.value} ${mappedQueries.value?.query} ...`;
 
 // Initial Request
-await makeApiRequest(mappedQueries.value, true);
-
-watch(
-  mappedQueries,
-  async (newQueries) => {
-    await makeApiRequest(newQueries, true);
-  },
-  { deep: true }
-);
+await makeApiRequest(mappedQueries.value, assetType.value === "all");
 
 watch(lottie_page, async (newPage) => {
   if (newPage < 2) return;
